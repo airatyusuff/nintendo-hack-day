@@ -8,7 +8,7 @@ const ImageGallery = ({ images }) => {
     <>
       <h2>Image Gallery</h2>
       <CardGroup>
-        {images.map((img, k) => (
+        {images.slice(-3).map((img, k) => (
           <ImageTile image={img} key={k} />
         ))}
       </CardGroup>
