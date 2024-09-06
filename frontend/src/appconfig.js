@@ -6,6 +6,7 @@ const config = {
   imageServiceUrl: function () {
     return `${config.imageServiceBaseUrl}/IL/teams/${config.teamName}/files`;
   },
+  backendLambdaUrl: 'https://lq7cuebiikbie2iz2jh26cfvba0aazpk.lambda-url.us-east-1.on.aws/'
 };
 
 export default config;

@@ -43,10 +43,17 @@ const postToImageStore = async (file) => {
 
 export default postToImageStore;
 
-// export const retrieveImgLink =  async (url) => {
-//   const requestOptions = {
-//     method: "GET",
-//     headers: {}, // Initialize headers object
-//   };
-//   return fetch(url, requestOptions);
-// };
+export const sendImgLinkForExtraction =  async (img_name) => {
+  const requestBody = {
+    img_url: img_name,
+  };
+
+  const requestOptions = {
+    method: "POST",
+    headers: {}, // Initialize headers object
+  };
+
+  requestOptions.headers["Content-Type"] = "application/json";
+  requestOptions.body = JSON.stringify(requestBody);
+  return fetch(config.backendLambdaUrl, requestOptions);
+};
