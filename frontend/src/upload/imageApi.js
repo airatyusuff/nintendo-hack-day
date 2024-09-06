@@ -42,3 +42,11 @@ const postToImageStore = async (file) => {
 };
 
 export default postToImageStore;
+
+// export const retrieveImgLink =  async (url) => {
+//   const requestOptions = {
+//     method: "GET",
+//     headers: {}, // Initialize headers object
+//   };
+//   return fetch(url, requestOptions);
+// };
