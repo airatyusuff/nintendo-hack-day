@@ -19,7 +19,12 @@ const ImageUploader = ({ destination }) => {
     setStatus("uploading");
 
     postToImageStore(file).then(
-      () => setStatus("success"),
+      async (res) => {
+        const json = await res.json()
+        console.log('response: ', json)
+        
+        setStatus("success")
+      },
       () => setStatus("fail")
     );
   };

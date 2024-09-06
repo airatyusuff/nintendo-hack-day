@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <>
       <Banner
-        title="Image to Text App"
+        title="PixelScript"
         message="Get your Grades now!"
       />
 
